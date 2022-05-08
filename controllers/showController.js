@@ -82,9 +82,8 @@ const booking = async (req, res) => {
     let totalSeats = findtitle.totalSeats;
 
     let availableSeats = totalSeats - seats;
-    console.log(availableSeats);
-
-    let bookedShow = totalSeats - availableSeats;
+    
+    let bookedShow = 100 - availableSeats;
     totalSeats = availableSeats;
 
     if (availableSeats < 0) {
